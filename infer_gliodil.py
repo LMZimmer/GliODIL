@@ -35,7 +35,7 @@ if __name__ == "__main__":
     tumorSegmentationPath_134 = convert_tumorseg_labels(tumorSegmentationPath)
 
     # Run without PET
-    cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={CUDA_DEVICE} GliODIL.py --outdirectory "{savePath}" --optimizer adamn --postfix _pet__PDE1.0_ --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --code x --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
+    cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={CUDA_DEVICE} /app/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --postfix _pet__PDE1.0_ --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --code x --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
     
     print(cmd)
     os.system(cmd)
