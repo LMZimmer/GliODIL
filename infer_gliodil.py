@@ -6,8 +6,8 @@ import nibabel as nib
 
 
 def convert_tumorseg_labels(seg_dir):
-    os.makedirs("tmp", exist_ok=True)
-    temp_dir = "tmp/tumorseg_134.nii.gz"
+    os.makedirs("/app/tmp", exist_ok=True)
+    temp_dir = "/app/tmp/tumorseg_134.nii.gz"
 
     seg = nib.load(seg_dir)
     aff = np.eye(4)
@@ -29,8 +29,8 @@ if __name__ == "__main__":
     wmPath = "/mlcube_io0/Patient-00000/00000-wm.nii.gz"
     gmPath = "/mlcube_io0/Patient-00000/00000-gm.nii.gz"
     csfPath = "/mlcube_io0/Patient-00000/00000-csf.nii.gz"
-    savePath = "tmp"
-    logfile = "tmp/gliodil.log"
+    savePath = "/app/tmp"
+    logfile = "/app/tmp/gliodil.log"
 
     tumorSegmentationPath_134 = convert_tumorseg_labels(tumorSegmentationPath)
 
