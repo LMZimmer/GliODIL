@@ -1,8 +1,7 @@
-matplotlib
-mpi4py
-numpy
-pyamg
-scipy
-tensorflow
-nibabel
-six
+matplotlib==3.9.3
+numpy==1.26.4
+pyamg==5.2.1
+scipy==1.14.1
+tensorflow[and-cuda]
+nibabel==5.3.2
+six==1.17.0
