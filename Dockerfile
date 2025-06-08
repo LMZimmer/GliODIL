@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.3.2-runtime-ubuntu22.04
+FROM nvidia/cuda:12.3.2-cudnn-runtime-ubuntu22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV NVIDIA_VISIBLE_DEVICES=all
