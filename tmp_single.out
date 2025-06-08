@@ -12,3 +12,11 @@ W0000 00:00:1749386401.537407 2127244 computation_placer.cc:177] computation pla
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 I0000 00:00:1749386405.869965 2127244 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 44211 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:46:00.0, compute capability: 7.5
 Pet in path provided - adding pet to the loss function.
+(240, 240, 155)
+(2, 112, 123, 105)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Done.

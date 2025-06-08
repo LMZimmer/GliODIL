@@ -1,4 +1,5 @@
 import os
+import shutil
 import argparse
 import numpy as np
 import nibabel as nib
@@ -40,8 +41,9 @@ if __name__ == "__main__":
     os.system(cmd)
 
     # Copy to mlcubeio1 and cleanup
-    pred_file = os.path.join(savePath+"x_pet__PDE1.0_", "tumorImage.nii.gz")
-    shutil.copy(pred_file, "/mlcube_io1/00000.nii.gz")
+    pred_file = os.path.join(savePath+"x_pet__PDE1.0_", "192_48_48_48_solution.nii")
+    img = nib.load(pred_file)
+    nib.save(img, "/mlcube_io1/00000.nii.gz")
 
     shutil.rmtree(savePath)
     shutil.rmtree(savePath+"x_pet__PDE1.0_")
