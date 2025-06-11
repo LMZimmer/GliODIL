@@ -43,7 +43,9 @@ if __name__ == "__main__":
     # Copy to mlcubeio1 and cleanup
     pred_file = os.path.join(savePath+"x_pet__PDE1.0_", "192_48_48_48_solution.nii")
     img = nib.load(pred_file)
-    nib.save(img, "/mlcube_io1/00000.nii.gz")
+    tmp_img_file = os.path.join(savePath, "00000.nii.gz")
+    nib.save(img, tmp_img_file)
+    shutil.copy(tmp_img_file, "/mlcube_io1/00000.nii.gz")
 
     shutil.rmtree(savePath)
     shutil.rmtree(savePath+"x_pet__PDE1.0_")
