@@ -1,0 +1,17 @@
+nohup: ignoring input
+2025-06-11 18:50:09.836 | INFO     | parsing:set_root_dir:236 - New root_dir set successfully.
+2025-06-11 18:50:09.837 | INFO     | parsing:load:213 - Successfully loaded 192 patients from /home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/gliodil.json.
+Predicting 0/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_001/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_001/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_001/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_001/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_001/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-11 18:50:10.487326: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749660610.508759 2108990 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749660610.516398 2108990 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749660610.533997 2108990 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749660610.534041 2108990 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749660610.534044 2108990 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749660610.534048 2108990 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-11 18:50:10.539168: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749660613.342796 2108990 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5

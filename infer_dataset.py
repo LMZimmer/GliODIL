@@ -1,5 +1,7 @@
 import os
 import argparse
+import numpy as np
+import nibabel as nib
 from pathlib import Path
 from parsing import LongitudinalDataset
 
@@ -20,7 +22,7 @@ def convert_tumorseg_labels(seg_dir, outfile):
 if __name__ == "__main__":
     # Example:
     # python infer_dataset.py -cuda_device 0
-    # nohup python -u infer_dataset.py -cuda_device 0 > tmp_dataset.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset gliodil -cuda_device 0 > tmp_gliodil.out 2>&1 &
     parser = argparse.ArgumentParser()
     parser.add_argument("-cuda_device", type=str, default="0", help="GPU id to run on.")
     parser.add_argument("-dataset", type=str)
@@ -75,7 +77,7 @@ if __name__ == "__main__":
             logfile = str(patient_dir / "processed/growth_models/gliodil/logfile.log")
 
             tumorSegmentationPath_134 = str(patient_dir / "processed/growth_models/gliodil/tumor_seg_134.nii.gz")
-            convert_tumorseg_labels(segdir=tumorSegmentationPath, outfile=tumorSegmentationPath_134)
+            convert_tumorseg_labels(seg_dir=tumorSegmentationPath, outfile=tumorSegmentationPath_134)
 
 
             cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'

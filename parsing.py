@@ -3,7 +3,6 @@ import argparse
 from pathlib import Path
 from loguru import logger
 from typing import List, Literal, Optional, TypedDict, Union
-from gbm_bench.utils.constants import RHUH_GBM_DIR
 
 
 class Exam(TypedDict):
@@ -252,33 +251,3 @@ class LongitudinalDataset():
                         filtered_exams.append(exam)
                 return filtered_exams
         return []
-
-
-if __name__=="__main__":
-    # Example
-    # python gbm_bench/utils/parsing.py -rhuh_root /home/home/lucas/data/RHUH-GBM/Images/DICOM/RHUH-GBM
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-rhuh_root", type=str, help="Path to the directory in the RHUH dataset containing the patient folders.")
-    args = parser.parse_args()
-
-    # Read RHUH
-    rhuh_gbm = LongitudinalDataset(dataset_id="RHUH", root_dir="")
-    rhuh_gbm.load(RHUH_GBM_DIR)
-
-    # Save to temporary folder
-    out_tmp = "tmp_parsing/rhuh.json"
-    rhuh_gbm.save(out_tmp)
-
-    # Load and compare
-    rhuh_gbm1 = LongitudinalDataset(dataset_id="RHUH", root_dir="")
-    rhuh_gbm1.load(out_tmp)
-    is_restored = (rhuh_gbm.__dict__ == rhuh_gbm1.__dict__)
-    if is_restored:
-        print(f"Saved and restored dataset successfully to {out_tmp}.")
-    else:
-        raise ValueError(f"Dataset restoration failed. Loaded dataset is not the same as before saving.")
-
-    # Try replacing root dir
-    out_tmp_newroot = "tmp_parsing/rhuh_newroot.json"
-    rhuh_gbm.set_root_dir("/test/rootdir/")
-    rhuh_gbm.save(out_tmp_newroot)
