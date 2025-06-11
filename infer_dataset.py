@@ -56,7 +56,7 @@ if __name__ == "__main__":
     if dataset is None:
         raise ValueError(f"Dataset {args.dataset} not implemented.")
 
-    for patient_ind, patient in enumerate(dataset.patients):
+    for patient_ind, patient in enumerate(dataset.patients):  # hung at 1
         print(f"Predicting {patient_ind}/{len(dataset.patients)}...")
 
         for exam in patient["exams"]:
@@ -80,7 +80,7 @@ if __name__ == "__main__":
             convert_tumorseg_labels(seg_dir=tumorSegmentationPath, outfile=tumorSegmentationPath_134)
 
 
-            cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
+            cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
             print(cmd)
     
     
