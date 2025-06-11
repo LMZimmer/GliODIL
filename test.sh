@@ -1,6 +1,6 @@
-docker run --rm --gpus '"device=2"' \
+docker run --rm --gpus '"device=5"' \
            --entrypoint python3 \
-           gliodil:latest - <<'PY'
+           gliodilgpu:latest - <<'PY'
 import tensorflow as tf, os
 print("TensorFlow", tf.__version__)
 print("Visible GPUs ->", tf.config.list_physical_devices("GPU"))
