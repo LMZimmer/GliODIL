@@ -23,6 +23,7 @@ if __name__ == "__main__":
     # Example:
     # python infer_dataset.py -cuda_device 0
     # nohup python -u infer_dataset.py -dataset gliodil -cuda_device 0 > tmp_gliodil.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset lumiere -cuda_device 1 > tmp_lumiere.out 2>&1 &
     parser = argparse.ArgumentParser()
     parser.add_argument("-cuda_device", type=str, default="0", help="GPU id to run on.")
     parser.add_argument("-dataset", type=str)
@@ -56,7 +57,9 @@ if __name__ == "__main__":
     if dataset is None:
         raise ValueError(f"Dataset {args.dataset} not implemented.")
 
-    for patient_ind, patient in enumerate(dataset.patients):  # hung at 1
+    starting_ind = 0
+    print(starting_ind)
+    for patient_ind, patient in enumerate(dataset.patients[starting_ind:]):  # hung at 5 for lumiere
         print(f"Predicting {patient_ind}/{len(dataset.patients)}...")
 
         for exam in patient["exams"]:
@@ -83,10 +86,12 @@ if __name__ == "__main__":
             cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
             print(cmd)
     
-    
-            os.system(cmd)
-            pred_file = str(patient_dir / "processed/growth_models/gliodil/192_48_48_48_solution.nii")
-            new_file = str(patient_dir / "processed/growth_models/gliodil/gliodil_pred.nii.gz")
-            pred = nib.load(pred_file)
-            nib.save(pred, new_file)
+            try:
+                os.system(cmd)
+                pred_file = str(patient_dir / "processed/growth_models/gliodil/192_48_48_48_solution.nii")
+                new_file = str(patient_dir / "processed/growth_models/gliodil/gliodil_pred.nii.gz")
+                pred = nib.load(pred_file)
+                nib.save(pred, new_file)
+            except Exception as e:
+                print(f"Exception for {patient_ind}: e")
     print("Done.")

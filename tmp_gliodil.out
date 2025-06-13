@@ -15,3 +15,486 @@ W0000 00:00:1749669446.350841 2365759 computation_placer.cc:177] computation pla
 2025-06-11 21:17:26.355255: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 I0000 00:00:1749669448.811810 2365759 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 114, 162, 117)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 1/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_002/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_002/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_002/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_002/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_002/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-11 22:49:00.176144: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749674940.207456 2537058 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749674940.216705 2537058 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749674940.240414 2537058 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749674940.240459 2537058 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749674940.240463 2537058 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749674940.240467 2537058 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-11 22:49:00.247191: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749674943.430741 2537058 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 117, 150, 118)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 2/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_003/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_003/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_003/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_003/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_003/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 00:18:08.004752: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749680288.022439 2690406 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749680288.028029 2690406 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749680288.043058 2690406 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749680288.043082 2690406 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749680288.043097 2690406 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749680288.043100 2690406 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 00:18:08.047339: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749680290.331037 2690406 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 70, 122, 63)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 3/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_004/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_004/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_004/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_004/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_004/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 01:37:56.969437: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749685076.988232 2840773 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749685076.993968 2840773 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749685077.009284 2840773 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749685077.009314 2840773 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749685077.009317 2840773 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749685077.009320 2840773 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 01:37:57.013658: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749685079.320216 2840773 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 90, 128, 78)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 4/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_005/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_005/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_005/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_005/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_005/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 02:59:23.982550: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749689964.001367 2987413 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749689964.007234 2987413 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749689964.022986 2987413 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749689964.023016 2987413 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749689964.023019 2987413 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749689964.023021 2987413 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 02:59:24.027420: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749689966.319108 2987413 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 58, 87, 56)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 5/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_006/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_006/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_006/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_006/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_006/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 04:19:33.567452: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749694773.585197 3131798 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749694773.590709 3131798 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749694773.605139 3131798 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749694773.605167 3131798 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749694773.605169 3131798 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749694773.605172 3131798 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 04:19:33.609501: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749694775.982529 3131798 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 34, 38, 38)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 6/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_007/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_007/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_007/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_007/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_007/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 05:41:03.338202: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749699663.356821 3279210 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749699663.362590 3279210 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749699663.377797 3279210 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749699663.377825 3279210 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749699663.377828 3279210 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749699663.377845 3279210 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 05:41:03.382171: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749699665.663687 3279210 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 102, 147, 106)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 7/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_008/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_008/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_008/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_008/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_008/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 07:05:06.324473: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749704706.343187 3437800 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749704706.348976 3437800 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749704706.364407 3437800 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749704706.364431 3437800 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749704706.364434 3437800 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749704706.364437 3437800 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 07:05:06.368785: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749704708.631327 3437800 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 106, 134, 105)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 8/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_009/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_009/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_009/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_009/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_009/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 08:30:26.422785: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749709826.441088 3611857 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749709826.446738 3611857 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749709826.461775 3611857 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749709826.461802 3611857 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749709826.461805 3611857 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749709826.461808 3611857 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 08:30:26.466054: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749709828.770523 3611857 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 50, 69, 42)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 9/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_010/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_010/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_010/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_010/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_010/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 09:50:23.621349: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749714623.649248 3766127 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749714623.657893 3766127 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749714623.679475 3766127 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749714623.679516 3766127 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749714623.679520 3766127 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749714623.679524 3766127 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 09:50:23.685545: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749714626.161378 3766127 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 94, 142, 101)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 10/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_011/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_011/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_011/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_011/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_011/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 11:14:37.952887: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749719677.972848 3936420 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749719677.979106 3936420 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749719677.995233 3936420 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749719677.995263 3936420 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749719677.995266 3936420 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749719677.995269 3936420 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 11:14:37.999996: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749719680.509501 3936420 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 60, 69, 42)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 11/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_012/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_012/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_012/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_012/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_012/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 13:34:44.688784: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749728084.707243 4187623 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749728084.712999 4187623 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749728084.727248 4187623 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749728084.727280 4187623 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749728084.727282 4187623 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749728084.727285 4187623 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 13:34:44.731542: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749728087.242574 4187623 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 48, 57, 58)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 12/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_013/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_013/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_013/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_013/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_013/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 15:47:24.595557: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749736044.616341  252457 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749736044.623478  252457 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749736044.640620  252457 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749736044.640666  252457 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749736044.640669  252457 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749736044.640672  252457 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 15:47:24.645507: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749736047.510149  252457 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 99, 138, 82)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 13/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_014/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_014/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_014/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_014/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_014/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 18:11:12.819253: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749744672.838856  500561 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749744672.845195  500561 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749744672.862438  500561 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749744672.862471  500561 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749744672.862474  500561 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749744672.862476  500561 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 18:11:12.867038: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749744675.664807  500561 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 104, 141, 117)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 14/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_015/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_015/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_015/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_015/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_015/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 20:22:49.706936: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749752569.735633  594962 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749752569.744490  594962 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749752569.761165  594962 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749752569.761204  594962 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749752569.761207  594962 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749752569.761210  594962 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 20:22:49.765566: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749752572.393405  594962 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 105, 140, 117)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 15/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_016/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_016/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_016/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_016/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_016/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 21:49:42.766417: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749757782.785017  664488 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749757782.790756  664488 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749757782.806193  664488 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749757782.806221  664488 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749757782.806224  664488 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749757782.806227  664488 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 21:49:42.810558: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749757785.127800  664488 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 87, 99, 110)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 16/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_017/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_017/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_017/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_017/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_017/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-12 23:13:30.658453: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749762810.677278  729104 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749762810.683130  729104 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749762810.698808  729104 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749762810.698842  729104 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749762810.698845  729104 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749762810.698847  729104 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-12 23:13:30.703203: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749762812.955333  729104 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 110, 146, 114)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 17/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_018/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_018/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_018/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_018/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_018/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 00:53:22.760514: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749768802.779382  815020 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749768802.785147  815020 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749768802.800867  815020 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749768802.800897  815020 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749768802.800900  815020 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749768802.800902  815020 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 00:53:22.805318: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749768805.194669  815020 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 63, 66, 58)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 18/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_019/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_019/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_019/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_019/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_019/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 02:14:15.739710: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749773655.758380  868920 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749773655.764085  868920 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749773655.779940  868920 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749773655.779968  868920 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749773655.779971  868920 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749773655.779973  868920 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 02:14:15.784350: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749773658.092052  868920 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 98, 152, 128)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 19/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_020/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_020/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_020/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_020/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_020/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 03:39:20.950971: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749778760.969487  929673 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749778760.975171  929673 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749778760.990441  929673 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749778760.990470  929673 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749778760.990473  929673 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749778760.990477  929673 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 03:39:20.994769: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749778763.296529  929673 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 64, 74, 62)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 20/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_021/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_021/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_021/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_021/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_021/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 05:00:30.301875: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749783630.320712  995117 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749783630.326604  995117 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749783630.342489  995117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749783630.342525  995117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749783630.342527  995117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749783630.342530  995117 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 05:00:30.346988: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749783632.604854  995117 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 117, 132, 105)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 21/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_022/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_022/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_022/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_022/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_022/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 06:25:50.778373: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749788750.797363 1053187 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749788750.803210 1053187 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749788750.819120 1053187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749788750.819149 1053187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749788750.819165 1053187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749788750.819168 1053187 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 06:25:50.823534: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749788753.144989 1053187 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 78, 94, 87)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 22/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_023/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_023/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_023/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_023/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_023/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 07:47:38.502030: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749793658.520668 1117001 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749793658.526420 1117001 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749793658.541916 1117001 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749793658.541956 1117001 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749793658.541959 1117001 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749793658.541961 1117001 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 07:47:38.546254: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749793660.865915 1117001 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
+(240, 240, 155)
+(2, 87, 141, 111)
+start plotting epoch: 0
+start plotting epoch: 3000
+start plotting epoch: 6000
+start plotting epoch: 9000
+start plotting epoch: f
+Predicting 23/192...
+/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_024/d0/preop
+USEGPU=1 CUDA_VISIBLE_DEVICES=0 /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_024/d0/preop/processed/growth_models/gliodil" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_024/d0/preop/processed/growth_models/gliodil/tumor_seg_134.nii.gz" --wm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_024/d0/preop/processed/tissue_segmentation/wm_pbmap.nii.gz"  --gm_path "/mnt/Drive2/lucas/datasets/GLIODIL/respond_tum_024/d0/preop/processed/tissue_segmentation/gm_pbmap.nii.gz" --pet_path ""
+2025-06-13 09:33:49.882342: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1749800029.901790 1264120 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749800029.908078 1264120 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1749800029.924871 1264120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749800029.924897 1264120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749800029.924900 1264120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1749800029.924903 1264120 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-06-13 09:33:49.929514: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1749800032.182203 1264120 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 47367 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:44:00.0, compute capability: 7.5
