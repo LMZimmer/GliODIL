@@ -24,6 +24,8 @@ if __name__ == "__main__":
     # python infer_dataset.py -cuda_device 0
     # nohup python -u infer_dataset.py -dataset gliodil -cuda_device 0 > tmp_gliodil.out 2>&1 &
     # nohup python -u infer_dataset.py -dataset lumiere -cuda_device 1 > tmp_lumiere.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset rhuh -cuda_device 2 > tmp_rhuh.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset upenn -cuda_device 5 > tmp_upenn.out 2>&1 &
     parser = argparse.ArgumentParser()
     parser.add_argument("-cuda_device", type=str, default="0", help="GPU id to run on.")
     parser.add_argument("-dataset", type=str)
@@ -38,7 +40,7 @@ if __name__ == "__main__":
         dataset = LongitudinalDataset(dataset_id="RHUH", root_dir=rhuh_root)
         dataset.load(RHUH_GBM_DIR)
     elif args.dataset == "upenn":
-        UPENN_GBM_DIR = Path("/home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/upenngbm.json")
+        UPENN_GBM_DIR = Path("/home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/upenn_gbm.json")
         upenn_gbm_root = "/home/home/lucas/data/UPENN-GBM/UPENN-GBM"
         dataset = LongitudinalDataset(dataset_id="UPENN_GBM", root_dir=upenn_gbm_root)
         dataset.load(UPENN_GBM_DIR)
@@ -57,9 +59,9 @@ if __name__ == "__main__":
     if dataset is None:
         raise ValueError(f"Dataset {args.dataset} not implemented.")
 
-    starting_ind = 0
+    starting_ind = 0  # 5 lum, 26 gliod
     print(starting_ind)
-    for patient_ind, patient in enumerate(dataset.patients[starting_ind:]):  # hung at 5 for lumiere
+    for patient_ind, patient in enumerate(dataset.patients[starting_ind:]):  
         print(f"Predicting {patient_ind}/{len(dataset.patients)}...")
 
         for exam in patient["exams"]:
@@ -68,6 +70,8 @@ if __name__ == "__main__":
             
             if args.dataset == "gliodil":
                 patient_dir = exam["t1c"].parent / "preop"
+            elif args.dataset == "upenn":
+                patient_dir = exam["t1"].parent
             else:
                 patient_dir = exam["t1c"].parent
             print(patient_dir)
@@ -93,5 +97,5 @@ if __name__ == "__main__":
                 pred = nib.load(pred_file)
                 nib.save(pred, new_file)
             except Exception as e:
-                print(f"Exception for {patient_ind}: e")
+                print(f"Exception for {patient_ind}: {e}")
     print("Done.")
