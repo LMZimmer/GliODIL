@@ -23,9 +23,15 @@ if __name__ == "__main__":
     # Example:
     # python infer_dataset.py -cuda_device 0
     # nohup python -u infer_dataset.py -dataset gliodil -cuda_device 0 > tmp_gliodil.out 2>&1 &
-    # nohup python -u infer_dataset.py -dataset lumiere -cuda_device 1 > tmp_lumiere.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset gliodil -cuda_device 2 > tmp_gliodil_150.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset gliodil -cuda_device 1 > tmp_gliodil_125.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset lumiere -cuda_device 2 > tmp_lumiere.out 2>&1 &
     # nohup python -u infer_dataset.py -dataset rhuh -cuda_device 2 > tmp_rhuh.out 2>&1 &
     # nohup python -u infer_dataset.py -dataset upenn -cuda_device 5 > tmp_upenn.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset ivygap -cuda_device 2 > tmp_ivygap.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset tcga_gbm -cuda_device 1 > tmp_tcga_gbm.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset cptac -cuda_device 5 > tmp_cptac.out 2>&1 &
+    # nohup python -u infer_dataset.py -dataset tcga_lgg -cuda_device 6 > tmp_tcga_gbm.out 2>&1 &
     parser = argparse.ArgumentParser()
     parser.add_argument("-cuda_device", type=str, default="0", help="GPU id to run on.")
     parser.add_argument("-dataset", type=str)
@@ -55,7 +61,25 @@ if __name__ == "__main__":
         dataset = LongitudinalDataset(dataset_id="LUMIERE", root_dir=lumiere_root)
         dataset.load(LUMIERE_DIR)
     elif args.dataset == "ivygap":
-        pass
+        IVYGAP_DIR = Path("/home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/ivygap.json")
+        ivygap_root = "/mnt/Drive2/lucas/datasets/IVYGAP"
+        dataset = LongitudinalDataset(dataset_id="IVYGAP", root_dir=ivygap_root)
+        dataset.load(IVYGAP_DIR)
+    elif args.dataset == "tcga_gbm":
+        TCGA_GBM_DIR = Path("/home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/tcga_gbm.json")
+        tcga_gbm_root = "/mnt/Drive2/lucas/datasets/TCGA-GBM"
+        dataset = LongitudinalDataset(dataset_id="TCGA_TBM", root_dir=tcga_gbm_root)
+        dataset.load(TCGA_GBM_DIR)
+    elif args.dataset == "cptac":
+        CPTAC_DIR = Path("/home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/cptac.json")
+        cptac_root = "/mnt/Drive2/lucas/datasets/CPTAC-GBM"
+        dataset = LongitudinalDataset(dataset_id="CPTAC", root_dir=cptac_root)
+        dataset.load(CPTAC_DIR)
+    elif args.dataset == "tcga_lgg":
+        TCGA_LGG_DIR = Path("/home/home/lucas/projects/gbm_bench/gbm_bench/data/datasets/tcga_lgg.json")
+        tcga_lgg_root = "/mnt/Drive2/lucas/datasets/TCGA-LGG"
+        dataset = LongitudinalDataset(dataset_id="TCGA_LGG", root_dir=tcga_lgg_root)
+        dataset.load(TCGA_LGG_DIR)
     if dataset is None:
         raise ValueError(f"Dataset {args.dataset} not implemented.")
 
@@ -64,10 +88,16 @@ if __name__ == "__main__":
     for patient_ind, patient in enumerate(dataset.patients[starting_ind:]):  
         print(f"Predicting {patient_ind}/{len(dataset.patients)}...")
 
+        remaining = ['Patient-067']
+        patient_id = patient["patient_id"]
+        if patient_id not in remaining:
+            print(f"Skipping {patient_id}")
+            continue
+
         for exam in patient["exams"]:
             if exam["timepoint"] != "preop":
                 continue
-            
+
             if args.dataset == "gliodil":
                 patient_dir = exam["t1c"].parent / "preop"
             elif args.dataset == "upenn":
