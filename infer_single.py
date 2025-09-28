@@ -30,64 +30,17 @@ if __name__ == "__main__":
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.cuda_device
 
-    
-    # tgm16, essential
-    """
-    patient_dir = "/mnt/Drive2/lucas/datasets/data_GliODIL_essential/data_716"
-    wmPath = os.path.join(patient_dir, "t1_wm.nii.gz")
-    gmPath = os.path.join(patient_dir, "t1_gm.nii.gz")
-    tumorSegmentationPath = os.path.join(patient_dir, "segm.nii.gz")
-    savePath = os.path.join(patient_dir, "pet_ess")
-    logfile = os.path.join(patient_dir, "tmp/gliodil.log")
-    petPath = os.path.join(patient_dir, "FET.nii.gz")
-    os.makedirs(savePath, exist_ok=True)
-    tumorSegmentationPath_134 = tumorSegmentationPath
-    """
-
-    # tgm16, gbmdata
-    """
-    patient_dir = "/mnt/Drive2/lucas/datasets/GLIODIL/tgm016/preop/preop/processed/"
-    wmPath = os.path.join(patient_dir, "tissue_segmentation/wm_pbmap.nii.gz")
-    gmPath = os.path.join(patient_dir, "tissue_segmentation/gm_pbmap")
-    tumorSegmentationPath = os.path.join(patient_dir, "tumor_segmentation/tumor_seg.nii.gz")
-    savePath = os.path.join(patient_dir, "growth_models/gliodil_test")
-    logfile = os.path.join(savePath, "gliodil.log")
-    os.makedirs(savePath, exist_ok=True)
-    tumorSegmentationPath_134 = convert_tumorseg_labels(tumorSegmentationPath)
-
-    # With PET
-    #cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --postfix _pet__PDE1.0_ --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --code x --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path "{petPath}"'
-    cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --postfix _pet__PDE1.0_ --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --code x --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
-    print(cmd)
-    """
-    completed = ["data_001", "data_013", "data_991", "data_992", "data_994"]
-    # data_0x and data_9x
     rootdir = Path("/mnt/Drive2/lucas/datasets/GLIODIL")
-    for folder in sorted(rootdir.glob("data_*")):
-        if folder.is_dir():
 
-            #if str(folder).split("_")[-1].startswith("0"):
-            #    print(f"Skipping {folder}")
-            #    continue
+    wmPath = str(rootdir / "t1_wm.nii.gz")
+    gmPath = str(rootdir / "t1_gm.nii.gz")
+    tumorSegmentationPath_134 = str(rootdir / "segm.nii.gz")
+    savePath = str(rootdir / "preop/processed/growth_models/gliodil")
+    logfile = str(rootdir / "preop/processed/growth_models/gliodil/gliodil.log")
+    os.makedirs(savePath, exist_ok=True)
 
-            #if str(folder).split("_")[-1].startswith("9"):
-            #    print(f"Skipping {folder}")
-            #    continue
+    cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
+    print(cmd)
 
-            print(f"{str(folder).split("/")[-1]}")
-            if str(folder).split("/")[-1] in completed:
-                print(f"Skipping {str(folder).split('/')[-1]}")
-                continue
-
-            wmPath = str(folder / "t1_wm.nii.gz")
-            gmPath = str(folder / "t1_gm.nii.gz")
-            tumorSegmentationPath_134 = str(folder / "segm.nii.gz")
-            savePath = str(folder / "preop/processed/growth_models/gliodil")
-            logfile = str(folder / "preop/processed/growth_models/gliodil/gliodil.log")
-            os.makedirs(savePath, exist_ok=True)
-
-            cmd = f'USEGPU=1 CUDA_VISIBLE_DEVICES={args.cuda_device} /home/home/lucas/projects/dockerize/GliODIL/GliODIL.py --outdirectory "{savePath}" --optimizer adamn --lambda_pde_multiplier 1.0 --Nt 192 --Nx 48 --Ny 48 --Nz 48 --days 100 --history_every 1000 --report_every 1000 --epochs 9000 --plot_every 3000 --save_solution y --final_print y --multigrid 1 --save_forward odil_res --save_forward2 full_trim_Gauss --initial_guess forward_character_dice_breaking --seg_path "{tumorSegmentationPath_134}" --wm_path "{wmPath}"  --gm_path "{gmPath}" --pet_path ""'
-            print(cmd)
-
-            os.system(cmd)
+    os.system(cmd)
     print("Done.")
